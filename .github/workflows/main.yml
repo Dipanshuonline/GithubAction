@@ -19,3 +19,5 @@ jobs:
         with:
           testFilePath: Jmeter/AutopacingJmeter.jmx
           outputReportsFolder: Jmeter/
+      - name: List Workspace Contents
+        run: ls -R /github/workspace
