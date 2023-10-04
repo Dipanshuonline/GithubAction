@@ -1,0 +1,21 @@
+name: Selenium and Jmeter
+
+on: 
+  push:
+    branches:
+      "**"
+
+jobs:
+  run-unit-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.0
+      - name: run Selenium
+        run: mvn test
+      - name: Apache JMeter
+        uses: rbhadti94/apache-jmeter-action@v0.7.0
+        with:
+          testFilePath: ./Jmeter/AutopacingJmeter.jmx
+          outputReportsFolder: ./Jmeter
