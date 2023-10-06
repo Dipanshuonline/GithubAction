@@ -39,8 +39,15 @@ jobs:
           username=$(ls -lrt)
           echo "The current user is: $username"
           cd ..
-    #  - name: run Selenium
-    #    run: mvn test
+      - name: Setup Chrome
+  # You may pin to the exact commit or the version.
+  # uses: browser-actions/setup-chrome@803ef6dfb4fdf22089c9563225d95e4a515820a0
+        uses: browser-actions/setup-chrome@v1.2.3
+        with:
+    # The Google Chrome/Chromium version to install and use.
+          chrome-version: default
+      - name: run Selenium
+        run: mvn test
       - name: Apache JMeter
         uses: rbhadti94/apache-jmeter-action@v0.7.0
         with:
