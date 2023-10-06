@@ -15,8 +15,9 @@ public class Selenium {
     public void setUp() {
     	//System.setProperty("webdriver.chrome.driver", ".\\Resources\\chromedriver.exe");
     	System.setProperty("webdriver.chrome.driver", "./Resources/chromedriver_linux");
-    	driver =new ChromeDriver();
-    	driver.manage().window().maximize();
+    	ChromeOptions options = new ChromeOptions();
+	options.setHeadless(true);
+	driver = new ChromeDriver(options);
        wait = new WebDriverWait(driver, 10);
     }
 
