@@ -21,6 +21,14 @@ jobs:
           echo "The current user is: $username"
           username=$(ls -lrt)
           echo "The current user is: $username"
+          cd Jmeter
+          username=$(ls -lrt)
+          echo "The current user is: $username"
+          cd ..
+          cd Resources
+          username=$(ls -lrt)
+          echo "The current user is: $username"
+          
     #  - name: run Selenium
     #    run: mvn test
     #  - name: Apache JMeter
