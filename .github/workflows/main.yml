@@ -38,8 +38,9 @@ jobs:
           cd Resources
           username=$(ls -lrt)
           echo "The current user is: $username"
-    #  - name: run Selenium
-    #    run: mvn test
+          cd ..
+      - name: run Selenium
+        run: mvn test
     #  - name: Apache JMeter
     #    uses: rbhadti94/apache-jmeter-action@v0.7.0
     #    with:
