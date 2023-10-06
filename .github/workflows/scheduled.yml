@@ -1,0 +1,16 @@
+name: scheduled
+
+on:
+  schedule:
+  #- cron: "0 */8 * * *"
+  - cron: "5 * * * *"
+  
+jobs:
+  run-unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.0
+      - name: run Selenium
+        run: mvn test
+      
