@@ -3,7 +3,7 @@ name: scheduled
 on:
   schedule:
   #- cron: "0 */8 * * *"
-  - cron: "*/5 * * * *"
+  - cron: "*/2 * * * *"
   
 jobs:
   run-unit-test:
