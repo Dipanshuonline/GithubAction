@@ -15,7 +15,7 @@ jobs:
       - name: Collect build data
         if: always()
         run: |
-          username=$(ls -R /github/workspace)
+          username=$(whoami)
           echo "The current user is: $username"
     #  - name: run Selenium
     #    run: mvn test
