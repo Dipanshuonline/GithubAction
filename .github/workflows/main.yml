@@ -17,12 +17,15 @@ jobs:
         run: |
           username=$(whoami)
           echo "The current user is: $username"
+          username=$(pwd)
+          echo "The current user is: $username"
+          username=$(ls -lrt)
+          echo "The current user is: $username"
     #  - name: run Selenium
     #    run: mvn test
-      - name: Apache JMeter
-        uses: rbhadti94/apache-jmeter-action@v0.7.0
-        with:
-          testFilePath: /home/runner/work/GithubAction/GithubAction/Jmeter/AutopacingJmeter.jmx
-          outputReportsFolder: Jmeter/
-      - name: List Workspace Contents
-        run: ls -R /github/workspace
+    #  - name: Apache JMeter
+    #    uses: rbhadti94/apache-jmeter-action@v0.7.0
+    #    with:
+    #      testFilePath: /home/runner/work/GithubAction/GithubAction/Jmeter/AutopacingJmeter.jmx
+    #      outputReportsFolder: Jmeter/
+      
