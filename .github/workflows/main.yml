@@ -34,7 +34,7 @@ jobs:
           username=$(ls -lrt)
           echo "The current user is: $username"
           cd ..
-          chmod -R 777 Resource/
+          chmod -R 777 Resources/
           cd Resources
           username=$(ls -lrt)
           echo "The current user is: $username"
