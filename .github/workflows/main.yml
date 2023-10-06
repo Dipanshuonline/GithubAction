@@ -25,6 +25,7 @@ jobs:
           username=$(ls -lrt)
           echo "The current user is: $username"
           cd ..
+          chmod 777 Jmeter
           chmod -R 777 Jmeter/
           cd Jmeter
           username=$(ls -lrt)
