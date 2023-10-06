@@ -8,15 +8,15 @@ E.g. Chromedrivers, java scripts, Jmeter scripts,
 	options.setHeadless(true);
 	driver = new ChromeDriver(options);			]
 3.	Use Linux commands to check permission, Directory location and other details.
-[	username=$(whoami)
-              echo "The current user is: $username"
-        	username=$(pwd)
-          	echo "The current user is: $username"
-          	username=$(ls -lrt)
-          	echo "The current user is: $username"
-          	cd Jmeter
-          	username=$(ls -lrt)
-          	echo "The current user is: $username"			]
+[		username=$(whoami)
+		echo "The current user is: $username"
+		username=$(pwd)
+		echo "The current user is: $username"
+		username=$(ls -lrt)
+		echo "The current user is: $username"
+		cd Jmeter
+		username=$(ls -lrt)
+		echo "The current user is: $username"			]
 4.	When using plugins other than default that come with Jmeter remember to visit ” HERE ”, this will provide with the plugin name.
 5.	Always remember you have support from GITHUB, Google, and chatgpt, if you get stuck somewhere simply search it. 
 
