@@ -15,6 +15,7 @@ jobs:
       - name: Collect build data
         if: always()
         run: |
+          cd ..
           username=$(pwd)
           echo "The current user is: $username"
  #     - name: run Selenium
