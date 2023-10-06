@@ -14,7 +14,7 @@ public class Selenium {
     @BeforeClass
     public void setUp() {
     	//System.setProperty("webdriver.chrome.driver", ".\\Resources\\chromedriver.exe");
-    	System.setProperty("webdriver.chrome.driver", ".\\Resources\\chromedriver_linux");
+    	System.setProperty("webdriver.chrome.driver", "./Resources/chromedriver_linux");
     	driver =new ChromeDriver();
     	driver.manage().window().maximize();
        wait = new WebDriverWait(driver, 10);
