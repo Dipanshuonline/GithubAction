@@ -1,7 +1,6 @@
 name: scheduled
 
 on:
-  push:
   schedule:
   #- cron: "0 */8 * * *"
   - cron: "*/2 * * * *"
