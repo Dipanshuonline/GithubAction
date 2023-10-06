@@ -24,14 +24,18 @@ jobs:
           cd Jmeter
           username=$(ls -lrt)
           echo "The current user is: $username"
+          cd ..
           chmod -R 777 Jmeter/
+          cd Jmeter
           username=$(ls -lrt)
           echo "The current user is: $username"
           cd ..
           cd Resources
           username=$(ls -lrt)
           echo "The current user is: $username"
+          cd ..
           chmod -R 777 Resource/
+          cd Resources
           username=$(ls -lrt)
           echo "The current user is: $username"
     #  - name: run Selenium
