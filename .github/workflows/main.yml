@@ -57,5 +57,6 @@ jobs:
         uses: rbhadti94/apache-jmeter-action@v0.7.0
         with:
            testFilePath: Jmeter/AutopacingJmeter.jmx
+           plugins: "jmeter-plugins-dummy"
       
       
