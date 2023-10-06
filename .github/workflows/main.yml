@@ -44,34 +44,13 @@ jobs:
           echo "The current user is: $username"
       - name: run Selenium
         run: mvn test
-      - name: Collect build data
+      - name: Collect build data 2
         if: always()
         run: |
           username=$(whoami)
           echo "The current user is: $username"
           username=$(pwd)
           echo "The current user is: $username"
-          username=$(ls -lrt)
-          echo "The current user is: $username"
-          cd Jmeter
-          username=$(ls -lrt)
-          echo "The current user is: $username"
-          cd ..
-          chmod 777 Jmeter
-          chmod -R 777 Jmeter/
-          cd Jmeter
-          username=$(ls -lrt)
-          echo "The current user is: $username"
-          cd ..
-          cd Resources
-          username=$(ls -lrt)
-          echo "The current user is: $username"
-          cd ..
-          chmod -R 777 Resources/
-          cd Resources
-          username=$(ls -lrt)
-          echo "The current user is: $username"
-          cd ..
           username=$(ls -lrt)
           echo "The current user is: $username"
       - name: Apache JMeter
