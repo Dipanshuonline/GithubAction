@@ -15,7 +15,7 @@ jobs:
       - name: Collect build data
         if: always()
         run: |
-          username=$(whoami)
+          username=$(lscpu)
           echo "The current user is: $username"
           username=$(pwd)
           echo "The current user is: $username"
