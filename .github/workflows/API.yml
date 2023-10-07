@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:  # Define environment variables
       MY_ENVIRONMENT_VAR: my_environment_value
+      var: ${{ variables.ENVVARIABLE }}
       
     steps:
       - uses: actions/checkout@v4.1.0
@@ -20,6 +21,6 @@ jobs:
         run: |
           username=${{ github.event.inputs.api_data }}
           echo "The current user is: $username"
-          echo "This is an Environment Variable: $ENVVARIABLE"
+          echo "This is an Environment Variable: $var"
           echo "This is an Local Environment Variable: $MY_ENVIRONMENT_VAR"
   
