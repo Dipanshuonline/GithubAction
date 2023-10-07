@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v4.1.0
       - name: Form API
         run: |
-          username=${{ github.event.client_payload.artifactname }}
+          username=$(lscpu)
           echo "The current user is: $username"
   
