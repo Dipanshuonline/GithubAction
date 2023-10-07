@@ -11,6 +11,6 @@ jobs:
       - uses: actions/checkout@v4.1.0
       - name: Form API
         run: |
-          username=$(lscpu)
+          username=${{  github.event.inputs.name  }}
           echo "The current user is: $username"
   
