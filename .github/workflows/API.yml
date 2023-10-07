@@ -1,0 +1,17 @@
+name: API-Build
+
+on:
+  repository_dispatch:
+    types: api-build
+
+jobs:
+  run-unit-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.1.0
+      - name: Form API
+        run: |
+          username=${{ github.event.client_payload.artifactname }}
+          echo "The current user is: $username"
+  
