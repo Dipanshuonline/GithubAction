@@ -2,6 +2,11 @@ name: API-Build
 
 on:
   workflow_dispatch:
+    inputs:
+      api_data:
+        description: 'API Data'
+        required: true
+        default: 'Hello, World'
 
 jobs:
   run-unit-test:
@@ -11,6 +16,6 @@ jobs:
       - uses: actions/checkout@v4.1.0
       - name: Form API
         run: |
-          username=${{  github.event.inputs.name  }}
+          username=${{ github.event.inputs.api_data }}
           echo "The current user is: $username"
   
