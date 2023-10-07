@@ -11,11 +11,15 @@ on:
 jobs:
   run-unit-test:
     runs-on: ubuntu-latest
-
+    env:  # Define environment variables
+      MY_ENVIRONMENT_VAR: my_environment_value
+      
     steps:
       - uses: actions/checkout@v4.1.0
       - name: Form API
         run: |
           username=${{ github.event.inputs.api_data }}
           echo "The current user is: $username"
+          echo "This is an Environment Variable: $ENVVARIABLE"
+          echo "This is an Local Environment Variable: $MY_ENVIRONMENT_VAR"
   
