@@ -1,0 +1,22 @@
+name: pullpullpull
+on:
+  pull_request:
+    branches:
+      "**"
+jobs:
+  run-unit-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.0
+      - name: Collect build data
+        if: always()
+        run: |
+          username=$(lscpu)
+          echo "The current user is: $username"
+          username=$(pwd)
+          echo "The current user is: $username"
+          username=$(ls -lrt)
+          echo "The current user is: $username"
+  
