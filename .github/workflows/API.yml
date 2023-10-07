@@ -1,8 +1,7 @@
 name: API-Build
 
 on:
-  repository_dispatch:
-    types: api-build
+  workflow_dispatch:
 
 jobs:
   run-unit-test:
