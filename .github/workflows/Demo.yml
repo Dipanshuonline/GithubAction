@@ -1,0 +1,27 @@
+name : DemoKSS
+
+on:
+  push:
+    branches:
+      "**"
+
+jobs:
+  DEMO_for_KSS1:
+    runs-on : ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.0
+      - name: First Step
+        run: echo "This is Step1"
+      - name: Second Step
+        run: echo "This is Step2"
+  DEMO_for_KSS2:
+    runs-on : ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.0
+      - name: First Step
+        run: echo "This is Step2.1"
+      - name: Second Step
+        run: echo "This is Step2.2"
+    
