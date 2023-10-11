@@ -1,0 +1,13 @@
+name: 'My Composite Action'
+description: 'A custom composite action'
+inputs:
+  myInput:
+    description: 'An example input'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Step 1
+      run: echo 'This is step 1'
+    - name: Step 2
+      run: echo 'This is step 2'
