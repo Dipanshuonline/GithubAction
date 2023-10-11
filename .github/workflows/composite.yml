@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: foo
-        uses: Dipanshuonline/GithubAction/blob/main/.github/workflows/composite.yml@v1
+        uses: Dipanshuonline/GithubAction/.github/workflows/composite.yml@v1
         with:
           myInput: 'Hello, world!'
