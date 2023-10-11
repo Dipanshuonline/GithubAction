@@ -4,14 +4,14 @@ on:
     branches:
       "**"
 jobs:
-  DEMO_for_KSS1:
+  DEMO_for_A:
     runs-on : ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.0
       - name: First Step
         run: echo "This is Step1"
-  DEMO_for_KSS2:
+  DEMO_for_B:
     runs-on : ubuntu-latest
    # needs: DEMO_for_KSS1
     steps:
@@ -19,9 +19,9 @@ jobs:
         uses: actions/checkout@v4.1.0
       - name: First Step
         run: echo "This is Step2.1"
-  DEMO_for_KSS3:
+  DEMO_for_C:
     runs-on : ubuntu-latest
-    needs: DEMO_for_KSS1
+    needs: DEMO_for_A
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.0
