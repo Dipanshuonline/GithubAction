@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use Composite Action
-        uses: Dipanshuonline/GithubAction@v1
+        uses: Dipanshuonline/GithubAction/.github/workflows/action.yml@v1
         with:
           myInput: 'Hello, world!'
