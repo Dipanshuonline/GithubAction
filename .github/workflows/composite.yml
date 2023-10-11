@@ -6,10 +6,12 @@ on:
       "**"
 
 jobs:
-  my_job:
+  hello_world_job:
     runs-on: ubuntu-latest
+    name: A job to say hello
     steps:
-      - name: Use Composite Action
-        uses: Dipanshuonline/GithubAction/.github/workflows/action.yml@v1
+      - uses: actions/checkout@v4
+      - id: foo
+        uses: Dipanshuonline/GithubAction/blob/main/.github/workflows/composite.yml@v1
         with:
           myInput: 'Hello, world!'
