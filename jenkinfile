@@ -1,0 +1,72 @@
+pipeline {
+    agent any
+    environment {
+        name = 'DIPANSHU'
+    }
+    parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+    }
+    stages {
+        stage('Command') {
+            steps {
+                bat '''
+                    dir
+                    cd
+                    echo Building World
+                '''
+            }
+        }
+        stage('Variable') {
+            steps {
+                script {
+                    echo "${name}"  // Use Groovy string interpolation for the environment variable
+                }
+            }
+        }
+        stage('Input') {
+            steps {
+                script {
+                    echo "${params.PERSON}"  // Use the parameter passed by the user
+                }
+            }
+        }
+        stage('PostPermission') {
+            steps {
+                script {
+                    input message: "Should we continue?", ok: "Yes, we should."
+                    echo 'Prod Testing World'
+                }
+            }
+        }
+        stage('Parallel In Sequential') {
+            parallel {
+                stage('In Parallel 1') {
+                    steps {
+                        echo "In Parallel 1"
+                    }
+                }
+                stage('In Parallel 2') {
+                    steps {
+                        echo "In Parallel 2"
+                    }
+                }
+				stage('In Parallel 3') {
+                    steps {
+                        echo "In Parallel 3"
+                    }
+                }
+            }
+        }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+        success {
+            echo 'I ran successfully :)'
+        }
+        failure {
+            echo 'I failed :('
+        }
+    }
+}
